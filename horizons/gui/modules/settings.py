@@ -96,6 +96,7 @@ class SettingsDialog(PickBeltWidget, Window):
 			Setting(UH, 'VolumeEffects', 'volume_effects', callback=self._apply_VolumeEffects,
 				on_change=self._on_slider_changed),
 			Setting(FIFE, 'PlaySounds', 'enable_sound', callback=self._apply_PlaySounds),
+			Setting(UH, 'PlayHoverSounds', 'enable_hover_sound', restart=True),
 			Setting(UH, 'EdgeScrolling', 'edgescrolling'),
 			Setting(UH, 'CursorCenteredZoom', 'cursor_centered_zoom'),
 			Setting(UH, 'MiddleMousePan', 'middle_mouse_pan'),

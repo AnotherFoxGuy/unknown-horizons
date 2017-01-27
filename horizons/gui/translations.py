@@ -657,6 +657,7 @@ def set_translations():
 		('scroll_speed_label'           , 'text'    ): T("Scroll delay:"),
 		('show_resource_icons_lbl'      , 'text'    ): T("Production indicators:"),
 		('sound_enable_opt_text'        , 'text'    ): T("Enable sound:"),
+        ('hover_sound_enable_opt_text'  , 'text'    ): T("Enable sound when hovering over buttons:"),
 		('uninterrupted_building_label' , 'text'    ): T("Uninterrupted building:"),
 		('cancelButton'                 , 'helptext'): T("Discard current changes"),
 		('defaultButton'                , 'helptext'): T("Reset to default settings"),

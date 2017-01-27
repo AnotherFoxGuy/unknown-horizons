@@ -153,7 +153,8 @@ class IngameGui(LivingObject):
 		MineEmpty.subscribe(self._on_mine_empty)
 		ZoomChanged.subscribe(self._update_zoom)
 		GuiAction.subscribe(self._on_gui_click_action)
-		GuiHover.subscribe(self._on_gui_hover_action)
+		if horizons.globals.fife.get_uh_setting("PlayHoverSounds"):
+			GuiHover.subscribe(self._on_gui_hover_action)
 		GuiCancelAction.subscribe(self._on_gui_cancel_action)
 		# NOTE: This has to be called after the text is replaced!
 		LanguageChanged.subscribe(self._on_language_changed)
@@ -169,7 +170,8 @@ class IngameGui(LivingObject):
 		MineEmpty.unsubscribe(self._on_mine_empty)
 		ZoomChanged.unsubscribe(self._update_zoom)
 		GuiAction.unsubscribe(self._on_gui_click_action)
-		GuiHover.unsubscribe(self._on_gui_hover_action)
+		if horizons.globals.fife.get_uh_setting("PlayHoverSounds"):
+			GuiHover.unsubscribe(self._on_gui_hover_action)
 		GuiCancelAction.unsubscribe(self._on_gui_cancel_action)
 
 		self.mainhud.mapEvents({

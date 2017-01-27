@@ -68,6 +68,10 @@
 				<Label name="sound_enable_opt_text" text="Enable sound:" min_size="256,0"/>
 				<CheckBox min_size="24,24" name="enable_sound" />
 			</HBox>
+			<HBox>
+				<Label name="hover_sound_enable_opt_text" text="Enable sound when hovering over buttons:" min_size="256,0"/>
+				<CheckBox min_size="24,24" name="enable_hover_sound" />
+			</HBox>
 		</VBox>
 
 		<VBox name="mouse_settings">

@@ -174,7 +174,8 @@ class Gui:
 	def show_main(self):
 		"""Shows the main menu"""
 		GuiAction.subscribe(self._on_gui_click_action)
-		GuiHover.subscribe(self._on_gui_hover_action)
+		if horizons.globals.fife.get_uh_setting("PlayHoverSounds"):
+			GuiHover.subscribe(self._on_gui_hover_action)
 		GuiCancelAction.subscribe(self._on_gui_cancel_action)
 
 		if not self._background.visible:
@@ -211,7 +212,8 @@ class Gui:
 
 	def close_all(self):
 		GuiAction.discard(self._on_gui_click_action)
-		GuiHover.discard(self._on_gui_hover_action)
+		if horizons.globals.fife.get_uh_setting("PlayHoverSounds"):
+			GuiHover.discard(self._on_gui_hover_action)
 		GuiCancelAction.discard(self._on_gui_cancel_action)
 		self.windows.close_all()
 		self._background.hide()
